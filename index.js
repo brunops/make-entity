@@ -1,7 +1,7 @@
 /* global module */
 
 module.exports = (function () {
-  'user strict';
+  'use strict';
 
   function Entity(options) {
     this.init(options);
