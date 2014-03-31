@@ -1,6 +1,6 @@
 var test = require('tape');
 
-var Entity = require('./Entity');
+var Entity = require('./');
 
 test('Entity', function (t) {
   t.plan(3);
