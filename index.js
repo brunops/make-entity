@@ -3,21 +3,22 @@
 module.exports = (function () {
   'use strict';
 
-  function Entity(options) {
-    this.init(options);
-  }
+  function extend(objProps, staticProps) {
+    function Surrogate(options) {
+      var prop;
 
-  Entity.prototype.init = function (options) {
-    for (var prop in this.constructor.defaults) {
-      this[prop] = options[prop] || this.constructor.defaults[prop];
-    }
-  };
+      // extend options with default values
+      // that were not provided
+      for (prop in this.constructor.defaults) {
+        options[prop] = options[prop] || this.constructor.defaults[prop];
+      }
 
-  Entity.extend = function (objProps, staticProps) {
-    function Surrogate() {
-      Entity.apply(this, arguments);
+      // define all props in new object instance
+      for (prop in options) {
+        this[prop] = options[prop];
+      }
     }
-    Surrogate.prototype = new Entity();
+
     Surrogate.prototype.constructor = Surrogate;
 
     // store obj defaults in Surrogate
@@ -33,5 +34,5 @@ module.exports = (function () {
     return Surrogate;
   };
 
-  return Entity;
+  return extend;
 }());

@@ -1,18 +1,30 @@
 var test = require('tape');
 
-var Entity = require('./');
+var extend = require('./');
 
-test('Entity', function (t) {
-  t.plan(3);
+test('extend', function (t) {
+  t.plan(5);
 
-  var MyEntity = Entity.extend({
+  var MyEntity = extend({
     x: 1,
     y: 5
   });
 
-  t.equal(typeof MyEntity, 'function');
-
   var obj = new MyEntity({ x: 10 });
+
+  t.equal(typeof MyEntity, 'function');
   t.equal(obj.x, 10);
   t.equal(obj.y, 5);
+
+
+  var EntityWithStaticProps = extend({
+    a: 1
+  }, {
+    hey: 5
+  });
+
+  var obj2 = new EntityWithStaticProps({ hey: 10 });
+
+  t.equal(obj2.hey, 10);
+  t.equal(EntityWithStaticProps.hey, 5);
 });
