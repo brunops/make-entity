@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "entity",
+  "name": "make-entity",
   "version": "0.0.0",
   "description": "Generic Entity creator that carries default values. The idea is to keep game entities dryer.'",
   "main": "index.js",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:brunops/entity.git"
+    "url": "git@github.com:brunops/make-entity.git"
   },
   "keywords": [
     "node.js",
@@ -23,6 +23,6 @@
   "author": "brunops",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/brunops/entity/issues"
+    "url": "https://github.com/brunops/make-entity/issues"
   }
 }
