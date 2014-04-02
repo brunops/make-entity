@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "make-entity",
   "version": "0.0.0",
   "description": "Generic Entity creator that carries default values. The idea is to keep game entities dryer.'",
