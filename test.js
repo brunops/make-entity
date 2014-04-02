@@ -3,12 +3,14 @@ var test = require('tape');
 var extend = require('./');
 
 test('extend', function (t) {
-  t.plan(5);
+  t.plan(6);
 
   var MyEntity = extend({
     x: 1,
     y: 5
   });
+
+  t.equal(typeof new MyEntity(), 'object');
 
   var obj = new MyEntity({ x: 10 });
 

@@ -5,6 +5,8 @@ module.exports = (function () {
 
   function extend(objProps, staticProps) {
     function Surrogate(options) {
+      options = options || {};
+
       var prop;
 
       // extend options with default values
