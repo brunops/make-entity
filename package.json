@@ -1,12 +1,12 @@
 {
   "name": "make-entity",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Generic Entity creator that carries default values. The idea is to keep game entities dryer.'",
   "main": "index.js",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "tape": "~2.12.1"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "node test.js"
   },
